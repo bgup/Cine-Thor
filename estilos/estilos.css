@@ -85,7 +85,7 @@ background: red;
     height: inherit;
     line-height: inherit;
     padding: 0 10px;
-    font-size: 16px;
+    font-size: 17px;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 2px;
@@ -120,47 +120,90 @@ background: red;
     display: none;
 }
 /* =============RESPONSIVE MENU=============== */
-
-@media(max-width:1349px){
-    .navbar{
-        background-color: green;
-    }
-    .navbar ul{
-        /* margin-left: 11%; */
-        width: 100%;
-        padding: 0 2px;
-        background-color: gray;
-        position: absolute;
-    }
-}
-@media(max-width:991px){
-.navbar ul{
-    padding: 0 10px;
-}
-.navbar ul li a{
-    min-width: 100px;
-    padding: 0 1px;
-}
-}
-@media(max-width:864px){
-    .navbar ul{
-        padding: 0 10px;
+    @media(max-width:1366px){
+    
+        .contenedor-titulos{
+            display: block;
+            width: 200px;
+            text-align: left;
+            margin-top: 15%;
+        }
+        .navbar ul{
+            width: 100%;
+            padding: 0;
+            margin-top: 0px;
+            background-color: rgba( 0  , 0, 0, .9);
+            /* background-color: rgba(128, 180, 31, 0.9); */
+            /* height: auto; */
+            height: 100vh;
+            max-height: 0;
+            overflow: hidden;
+            transition: all ease-in-out .3s;
+            
+        }
+        .navbar ul.open{
+            max-height: 100vh
+        }
+        .navbar ul li{
+            width: 100%;
+            /* border-bottom: 1px solid rgba(255, 255, 255, .3); */
+        }
+        .navbar ul li a{
+            padding: 0;
+            color: #fff;
+        }
+        .navbar .navbar-toggler{
+            display: block;
+            position: absolute;
+            height: 40px;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            color: #fff;
+            border: none;/* cambiar el borde del  boton  */   
+            border-radius: 3px;
+            border: 3px solid #000;
+            outline: none;
+            padding: 0 5px;
+            cursor: pointer;  
+        }
+        .navbar .navbar-toggler span,
+        .navbar .navbar-toggler span::before,
+        .navbar .navbar-toggler span::after{
+            display: block;
+            content:' ' ;
+            background-color: #000;
+            height: 3px;
+            width: 28px;
+            border-radius: 4px;
+            transition: all ease-in-out .3s;
+        }
+        .navbar .navbar-toggler span::before{
+            transform: translateY(-8px)
+        }
+        .navbar .navbar-toggler span::after{
+            transform: translateY(5px)
+        }
+        .navbar .navbar-toggler .open-navbar-toggler span{
+            background-color: transparent;
+        }
+        .navbar .navbar-toggler .open-navbar-toggler span::before{
+            transform: translateY(0px) rotate(45deg);
+        }
+        .navbar .navbar-toggler .open-navbar-toggler span::after{
+            transform: translateY(-3px) rotate(-45deg) ;
+        }
         
     }
-    .navbar ul li a{
-        min-width: 60px;
-        padding: 0 1px;
-        margin-left: 15px;
-    }
-    }
-
-@media (max-width:767px){
+@media (max-width:768px){
 .navbar{
     padding: 0;
     position: absolute;
     margin-left: -10%;
     width: 100%;
+    
 }
+
 .contenedor-titulos{
     display: block;
     width: 200px;
@@ -172,8 +215,8 @@ background: red;
     padding: 0;
     margin-top: 0px;
     background-color: rgba( 0  , 0, 0, .9);
-    /* height: auto; */
-    height: 100vh;
+    height: auto;
+    /* height: 100vh; */
     max-height: 0;
     overflow: hidden;
     transition: all ease-in-out .3s;
@@ -190,12 +233,23 @@ background: red;
     padding: 0;
     color: #fff;
 }
+.navbar a.navbar-brand{
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 10px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 10%;
+}
 .navbar .navbar-toggler{
     display: block;
     position: absolute;
     height: 40px;
     top: 20px;
-    right: 20px;
+    right: 10%;
     background-color: transparent;
     color: #fff;
     border: none;/* cambiar el borde del  boton  */   
@@ -204,34 +258,7 @@ background: red;
     outline: none;
     padding: 0 5px;
     cursor: pointer;  
-   
-    
-}
-.navbar .navbar-toggler span,
-.navbar .navbar-toggler span::before,
-.navbar .navbar-toggler span::after{
-    display: block;
-    content:' ' ;
-    background-color: #000;
-    height: 3px;
-    width: 28px;
-    border-radius: 4px;
-    transition: all ease-in-out .3s;
-}
-.navbar .navbar-toggler span::before{
-    transform: translateY(-8px)
-}
-.navbar .navbar-toggler span::after{
-    transform: translateY(5px)
-}
-.navbar .navbar-toggler .open-navbar-toggler span{
-    background-color: transparent;
-}
-.navbar .navbar-toggler .open-navbar-toggler span::before{
-    transform: translateY(0px) rotate(45deg);
-}
-.navbar .navbar-toggler .open-navbar-toggler span::after{
-    transform: translateY(-3px) rotate(-45deg) ;
 }
 }
+
 
