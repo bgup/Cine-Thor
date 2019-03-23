@@ -1,30 +1,31 @@
-body{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
-background: red;
-}
+
  /* tamaño header  */
 .header{
     width: 100%;
     height: 40vh;
-    position: absolute;
+    position: relative;
+    
 }
 .contenedor-titulos{
     /* background: white; */
     color:#fff;
     text-align: left;
-    position: relative;
+    position: absolute;
     margin-top: 40px;
     margin-left: 10%;
     width: 12%;
+    
 }
 .contenedor-titulos h3{
     font-size: 13px;
-    margin-top: -10px;
+    margin-top: 2px;
 }
+/* boton iniciar sesion */
 .sesion{
     text-decoration:none;
     color: #fff;
@@ -36,6 +37,7 @@ background: red;
     font-size: 13px;
     padding: 4px 4px;
 }
+/* pesudoelementos boton */
 .sesion:visited{
     color:#fff;
 }
@@ -44,6 +46,7 @@ background: red;
     color:#000;
     transition: all ease-in-out .3s;
 }
+/* boton reservar */
 .btnTrailer{
     display:inline-block;
     text-decoration:none;
@@ -53,7 +56,8 @@ background: red;
     font-size: 15px;
     padding: 4px 4px;
     margin-left: 10%;
-    margin-top: 10px;
+    margin-top: 100px;
+    
 }
  /* posicion menu */
 
@@ -68,8 +72,9 @@ background: red;
     line-height: 70px;
     font-size: 16px;
     padding: 0 px;
-    position: fixed;
-    top: 35vh;
+    position: relative;
+  background: yellow;
+    top: -40px;
     left: 10%;
     z-index: 10;
    /*  overflow: hidden; */
@@ -78,7 +83,7 @@ background: red;
 .navbar a{
     text-decoration: none;
     color: #000;
-    background-color: blue;
+    /* background-color: blue; */
 }
 .navbar a.navbar-brand{
     float: left;
@@ -198,7 +203,7 @@ background: red;
 @media (max-width:768px){
 .navbar{
     padding: 0;
-    position: absolute;
+    position: relative;
     margin-left: -10%;
     width: 100%;
     
@@ -260,5 +265,88 @@ background: red;
     cursor: pointer;  
 }
 }
+/* =============FIN RESPONSIVE MENU=============== */
+/* ====================INICIA COTENIDO============================== */
+main{
+    color: black;
+    position: relative;
+    height: 1500px;
+    background: red;
+    width: 80%;
+    margin-left: 10%;
+    top: -40px;
+}
+.section-articulos{
+    width: 100%;
+    height: 300px;
+    /* background: blue; */
+    position: absolute;
+}
+.section-articulos h3{ 
+    text-align: center;
+    margin-top: 20px;
+}
 
 
+
+/* ======SLIDER==== */
+
+.swiper-container {
+    width: 100%;
+    height: 350px; /* aqui pueden cambiar el tamaño del slider */
+    
+  }
+  .swiper-slide {
+      margin-top:40px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+
+  /* inicio slider */
+.slider-publicidad{
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background: url(../imagenes/img1f4.jpg) ;
+    background-size: 100% 500px;
+    /* z-index: -1; */
+    animation: slide 20s infinite;   /* declaramos  animacion con nombre slide que dura 20 segundos y es infinita */
+    margin-top: 20px;
+}
+@keyframes slide{
+    0%{
+        background: url(../imagenes/img2f4.jpg);
+        background-size: 100% 500px;
+    }
+    50% {
+        background: url(../imagenes/img3f4.jpg);
+        background-size: 100% 500px;
+    
+    }
+    60% {
+        background: url(../imagenes/img3f4.jpg);
+        background-size: 100% 500px;
+    
+    }
+    100% {
+        background: url(../imagenes/img4-f5.jpg);
+        background-size: 100% 500px;
+    }
+}
+/* final slider */
