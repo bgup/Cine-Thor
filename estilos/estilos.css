@@ -5,21 +5,25 @@ body{
 }
 body{
 background: red;
-overflow: hidden;
 }
- 
+ /* tamaño header  */
 .header{
     width: 100%;
     height: 40vh;
     position: absolute;
 }
 .contenedor-titulos{
-    background: white;
+    /* background: white; */
+    color:#fff;
     text-align: left;
     position: relative;
     margin-top: 40px;
-    margin-left: 8%;
-    width: 15%;
+    margin-left: 10%;
+    width: 12%;
+}
+.contenedor-titulos h3{
+    font-size: 13px;
+    margin-top: -10px;
 }
 .sesion{
     text-decoration:none;
@@ -27,9 +31,9 @@ overflow: hidden;
     float: right;
     border: 1px solid red;
     border-radius: 8px;
-    margin-right: 5%;
+    margin-right: 10%;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 13px;
     padding: 4px 4px;
 }
 .sesion:visited{
@@ -45,8 +49,8 @@ overflow: hidden;
     text-decoration:none;
     color: #fff;
     border: 1px solid white;
-    border-radius: 8px;
-    font-size: 20px;
+    border-radius: 7px;
+    font-size: 15px;
     padding: 4px 4px;
     margin-left: 10%;
     margin-top: 10px;
@@ -60,25 +64,28 @@ overflow: hidden;
     color: #000;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
     width: 80%;
-    height: 80px;
-    line-height: 80px;
-    font-size: 18px;
-    padding: 0 30px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 16px;
+    padding: 0 px;
     position: fixed;
     top: 35vh;
     left: 10%;
     z-index: 10;
+   /*  overflow: hidden; */
+    box-sizing: border-box; /* Se usa para que el padding se tome de su contenedor (obligado) */
 }
 .navbar a{
     text-decoration: none;
     color: #000;
+    background-color: blue;
 }
 .navbar a.navbar-brand{
     float: left;
     height: inherit;
     line-height: inherit;
-    padding: 0 30px;
-    font-size: 22px;
+    padding: 0 10px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 2px;
@@ -91,8 +98,10 @@ overflow: hidden;
     float: right;
     list-style: none;
     height: inherit;
-    line-height: inherit;
-    padding: 0 50px;
+    line-height: inherit; 
+    padding: 0 1px;
+    margin-top: 0;        
+    /* background: black; */
 }
 .navbar ul li{
     display:inline-block;
@@ -101,14 +110,28 @@ overflow: hidden;
     display: block;
     text-align: center;
     min-width: 120px;
-    padding: 0 30px;
+    padding: 0 2px;
 }
 .navbar ul li a:hover{
-    background-color: rgba(255, 255, 255,   .15);
+    background-color: rgba(7, 7, 7, 0.3);
 
 }
 .navbar .navbar-toggler{
     display: none;
+}
+/* =============RESPONSIVE MENU=============== */
+
+@media(max-width:1349px){
+    .navbar{
+        background-color: green;
+    }
+    .navbar ul{
+        /* margin-left: 11%; */
+        width: 100%;
+        padding: 0 2px;
+        background-color: gray;
+        position: absolute;
+    }
 }
 @media(max-width:991px){
 .navbar ul{
@@ -116,9 +139,21 @@ overflow: hidden;
 }
 .navbar ul li a{
     min-width: 100px;
-    padding: 0 20px;
+    padding: 0 1px;
 }
 }
+@media(max-width:864px){
+    .navbar ul{
+        padding: 0 10px;
+        
+    }
+    .navbar ul li a{
+        min-width: 60px;
+        padding: 0 1px;
+        margin-left: 15px;
+    }
+    }
+
 @media (max-width:767px){
 .navbar{
     padding: 0;
@@ -142,6 +177,7 @@ overflow: hidden;
     max-height: 0;
     overflow: hidden;
     transition: all ease-in-out .3s;
+    
 }
 .navbar ul.open{
     max-height: 100vh
@@ -152,6 +188,7 @@ overflow: hidden;
 }
 .navbar ul li a{
     padding: 0;
+    color: #fff;
 }
 .navbar .navbar-toggler{
     display: block;
@@ -163,7 +200,7 @@ overflow: hidden;
     color: #fff;
     border: none;/* cambiar el borde del  boton  */   
     border-radius: 3px;
-    border: 3px solid #fff;
+    border: 3px solid #000;
     outline: none;
     padding: 0 5px;
     cursor: pointer;  
@@ -175,7 +212,7 @@ overflow: hidden;
 .navbar .navbar-toggler span::after{
     display: block;
     content:' ' ;
-    background-color: #fff;
+    background-color: #000;
     height: 3px;
     width: 28px;
     border-radius: 4px;
