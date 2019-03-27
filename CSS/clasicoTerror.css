@@ -1,0 +1,48 @@
+
+#headerVideo .contenedorclaTe{
+    width: 100%;
+    height: 40vh;
+    background-image: url(../Imagenes/THE-SHINING.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+}
+#headerVideo .contenedorclaTe .contenedor{
+    width: 110px;
+    height: 4vh;
+    background-image: none;
+    display: block;
+    border: 1px solid white;
+    position: sticky;
+    left: 14%;
+    top: 16%;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+   
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#headerVideo .contenedorclaTe .contenedor1{
+    width: auto;
+    height: auto;
+    display: block;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    left: 11%;
+    top: 11%;
+}
+
+#headerVideo .contenedorclaTe .contenedor2{
+    width: auto;
+    height: auto;
+    display: block;
+    font-size: 10px;
+    color: white;
+    position: relative;
+    left: 13%;
+    top: 13%;
+
+}

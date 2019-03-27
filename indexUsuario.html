@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cine thor</title>
+    <link rel="shortcut icon" href="Imagenes/iconothor.ico">
+    <link rel="stylesheet" href="CSS/indexUsuario.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <!-- este script carga el chat -->
+    <script async>(function(w, d) { 
+        w.CollectId = "5c9112377390e748f542fe4e"; 
+        var h = d.head || d.getElementsByTagName("head")[0]; 
+        var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); 
+        s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);
+    </script>
+  </head>
+<body>
+    <!-- Contiene el video y los botonos de sesion, reserva y trailer -->
+    <header class="header" data-vide-bg="videos/Avengers">
+        <p id="usuario" class="bienvenido">Bienvenido </p>
+            <div class="contenedor-titulos">
+                <h2>AVENGERS</h2>
+                <h3>CIENCIA fICCION-ACCION</h3>
+            </div>
+        <a href="#" class="btnReservar">RESERVAR</a> 
+        <a href="#openVideo" class="btnTrailer">VER TRAILER</a>
+    </header>
+
+    <!-- Contiene el menu de la pagina -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand"><sub>LOGO</sub></a>
+        <ul>
+            <li><a href="cartelera.html">CARTELERA</a></li>
+            <li><a href="Terror.html">TERROR</a></li>
+            <li><a href="timburton.html">CINE TIM BURTON</a></li>
+            <li><a href="#">TARJETHOR</a></li>
+            <li><a href="#">CONFITERIA</a></li>
+            <li><a href="#">ALIADOS</a></li>
+            <li><a href="#">CONTACTENOS</a></li>
+        </ul>
+        <button class="navbar-toggler">
+            <span></span>
+        </button>
+    </nav>
+    <main class="">
+        <section class="section-articulos">
+                <h3 class="h3" style="color: black">EN CARTELERA</h3>
+                <!-- Swiper -->
+         <div class="swiper-container">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide" id="imagen1"></div>
+            <div class="swiper-slide" id="imagen2"></div>
+            <div class="swiper-slide" id="imagen3"></div>
+            <div class="swiper-slide" id="imagen4"></div>
+            <div class="swiper-slide" id="imagen5"></div>
+            <div class="swiper-slide" id="imagen6"></div>
+            </div>
+            <!-- Add Pagination --> <!-- no modificar -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="slider-publicidad">
+           <!-- aqui va la imagen de publicidad -->
+        </div>
+
+        <div class="swiper-container" id="swiper2">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide" id="imagen1"></div>
+            <div class="swiper-slide" id="imagen2"></div>
+            <div class="swiper-slide" id="imagen3"></div>
+            <div class="swiper-slide" id="imagen4"></div>
+            <div class="swiper-slide" id="imagen5"></div>
+            <div class="swiper-slide" id="imagen6"></div>
+            </div>
+            <!-- Add Pagination --> <!-- no modificar -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        </section>
+    </main>
+       <script src="JavaScript/login.js"></script>
+       <script src="JavaScript/main.js"></script> <!-- este script  despliega el menu bar  -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--   importante  para cargar el video -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script> <!-- cargamos una libreria de javascript para el slider  por medio de cnd -->
+       <script src="JavaScript/jquery.vide.js"></script><!--   importante  para cargar el video -->
+       <script src="JavaScript/swiper.js"></script><!-- cargamos la libreria de swiper.js  -->
+       <script>
+           var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          slidesPerGroup: 2,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
+
+    <!-- caja modal del registro -->
+<div id="openModal" class="modalDialog"><br> <h1 class="h1">Iniciar <span class="h2">sesión</span></h1>
+    <a href="index.html" title="Close" class="close">X</a>
+    <form method="post" name="form" action=""><br>
+        <h3 class="p1">Usuario:</h3><input class="caja" type="text" name="user" value="" placeholder="Usuario">
+        <h3 class="p2">Contraseña:</h3><input class="caja2" type="password" name="password" value="" placeholder="Contraseña"><br><br><br>
+        <input onclick="login()" type="button" value="Iniciar sesión" class="acce">
+        <br><p class="p3">¿No te has regristado? <span><a href="registroInicioSesion.html">Regístrate</a></span></p>
+    </form> 
+</div>
+
+    <!-- caja modal del video -->
+<div id="openVideo" class="modalVideo">
+    <a href="index.html" title="Close" class="close">X</a>
+    
+    <video controls loop width="100%" height="630px" src="videos/Avengers.mp4" type="video/mp4"> </video>
+
+</div>
+
+</body>
+</html>

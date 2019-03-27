@@ -1,0 +1,803 @@
+/* con este import estamos haciendo uso de un tipo de fuente desde la pagina googleFonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;      
+}
+
+body{
+    font-family: 'Roboto' , sans-serif;
+    background-color: #000;
+}
+
+ /* tamaño header  */
+.header{
+    width: 100%;
+    height: 40vh;
+    position: fixed;
+    z-index: 11;        /*Con el z-index, posicionamos las cajas*/
+}
+
+.contenedor-titulos{
+    /* background: white; */
+    color:#fff;
+    text-align: left;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 10%;
+    width: 13%;
+}
+
+.contenedor-titulos h3{    
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.bienvenido{
+    float: right;
+    color: #fff;
+    margin-right: 10%;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+/* boton iniciar sesion */
+.sesion{
+    text-decoration:none;
+    color: #fff;
+    float: right;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-right: 10%;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 4px 4px;
+}
+
+/* pesudoelementos boton */
+.sesion:visited{
+    color:#fff;
+}
+.sesion:hover{
+    background: rgba(224, 222, 222, 0.849);
+    color:#000;
+    transition: all ease-in-out .3s;
+}
+
+/* Boton reservar */
+.btnReservar{
+    display:inline-block;
+    text-decoration:none;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 4px 4px;
+    margin-left: 10%;
+    margin-top: 60px;    
+}
+.btnReservar:hover{
+    background: rgba(224, 222, 222, 0.849);
+    color:#000;
+    transition: all ease-in-out .3s;
+}
+
+/* Boton trailer */
+.btnTrailer{
+    display:inline-block;
+    text-decoration:none;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 4px 4px;
+    margin-left: 5%;
+    margin-top: 60px;    
+}
+.btnTrailer:hover{
+    background: rgba(224, 222, 222, 0.849);
+    color:#000;
+    transition: all ease-in-out .3s;
+}
+ 
+
+
+/* ==================== MENU NAVEGACION ========================== */
+.navbar{
+    
+    /* background-color: rgb(250, 246, 246); */
+    color: #000;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    width: 80%;
+    height: 80px;
+    line-height: 70px;
+    font-size: 16px;
+    padding: 0 px;
+    position: sticky;
+    background: #fff;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #243B55, #141E30);  */ /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #243B55, #141E30); */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    top: 210px;
+    left: 10%;
+    z-index: 12;
+   /*  overflow: hidden; */
+    box-sizing: border-box; /* Se usa para que el padding se tome de su contenedor (obligado) */
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    /* background-color: blue; */
+}
+
+/* aca va el logo */
+.navbar a.navbar-brand{
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 10px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* .navbar a.navbar-brand span{
+    font-size: 28px;
+    font-weight: 700;
+} */
+
+/* la lista del menu */
+.navbar ul{
+    /* float: right; */
+    text-align: center;
+    list-style: none;
+    height: inherit;
+    line-height: inherit; 
+    padding: 0 1px;
+    margin-top: 0;        
+    /* background: black; */
+}
+
+.navbar ul li{
+    display:inline-block;
+}
+
+.navbar ul li a{
+    display: block;
+    text-align: center;
+    min-width: 120px;
+    padding: 0 2px;
+}
+
+.navbar ul li a:hover{
+    background-color:rgb(81, 104, 148);
+    color: #fff;
+}
+
+.navbar .navbar-toggler{
+    display: none;
+}
+
+/* ============= RESPONSIVE MENU =============== */
+@media(max-width:1200px){
+.contenedor-titulos{
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin-top: 3%;
+}
+
+.navbar ul{
+    width: 100%;
+    padding: 0;
+    margin-top: 0px;
+    background-color: rgba( 0  , 0, 0, .9);
+    /* background-color: rgba(128, 180, 31, 0.9); */
+    /* height: auto; */
+    height: 100vh;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+}
+
+.navbar ul.open{
+    max-height: 100vh
+}
+
+.navbar ul li{
+    width: 100%;
+    /* border-bottom: 1px solid rgba(255, 255, 255, .3); */
+}
+
+.navbar ul li a{
+    padding: 0;
+    color: #fff;
+}
+
+.navbar .navbar-toggler{
+    display: block;
+    position: absolute;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #000;
+    border: none;/* cambiar el borde del  boton  */   
+    border-radius: 3px;
+    border: 3px solid black;
+    outline: none;
+    padding: 0 5px;
+    cursor: pointer;  
+}
+.navbar .navbar-toggler span,
+.navbar .navbar-toggler span::before,
+.navbar .navbar-toggler span::after{
+    display: block;
+    content:' ' ;
+    background-color: black;
+    height: 3px;
+    width: 28px;
+    border-radius: 4px;
+    transition: all ease-in-out .3s;
+}
+
+.navbar .navbar-toggler span::before{
+    transform: translateY(-8px)
+}
+
+.navbar .navbar-toggler span::after{
+    transform: translateY(5px)
+}
+
+.navbar .navbar-toggler .open-navbar-toggler span{
+    background-color: transparent;
+}
+
+.navbar .navbar-toggler .open-navbar-toggler span::before{
+    transform: translateY(0px) rotate(45deg);
+}
+
+.navbar .navbar-toggler .open-navbar-toggler span::after{
+    transform: translateY(-3px) rotate(-45deg) ;
+}
+        
+}
+@media (max-width:768px){
+
+header{
+    position: fixed;
+    margin-top: -322px;
+}
+
+.contenedor-titulos{
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin-top: 3%;
+}
+
+.navbar{
+    padding: 0;
+    position: fixed;
+    margin-left: -10%;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.contenedor-titulos{
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin-top: 3%;
+}
+.navbar ul{
+    width: 100%;
+    padding: 0;
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, .9);
+    height: auto;
+    /* height: 100vh; */
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+   }
+.navbar ul.open{
+    max-height: 100vh
+}
+.navbar ul li{
+    width: 100%;
+    /* border-bottom: 1px solid rgba(255, 255, 255, .3); */
+}
+.navbar ul li a{
+    padding: 0;
+    color: #fff;
+}
+.navbar a.navbar-brand{
+    
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 10px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 10%;
+}
+.navbar .navbar-toggler{
+    display: block;
+    position: absolute;
+    height: 40px;
+    top: 20px;
+    right: 10%;
+    background-color: transparent;
+    color: #fff;
+    border: none;/* cambiar el borde del  boton  */   
+    border-radius: 3px;
+    border: 3px solid #000;
+    outline: none;
+    padding: 0 5px;
+    cursor: pointer;  
+}
+}
+/* ============= FIN RESPONSIVE MENU =============== */
+
+/* ==================== INICIA COTENIDO ============================== */
+main{
+    margin-top: 310px;
+    color: black;
+    position: relative;
+    height: 1400px;
+    background: #000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fff, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fff, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 80%;
+    margin-left: 10%;
+    top: -100px;
+    z-index: 1;
+    /* Sombra de la caja contenedora*/
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.75);
+}
+
+.section-articulos{
+    width: 100%;
+    height: 300px;
+    /* background: blue; */
+    position: absolute;
+}
+
+.section-articulos h3{ 
+    text-align: center;
+    margin-top: 20px;
+}
+
+#swiper2{
+    margin-top: 480px;
+}
+
+/* ========= SLIDER ========== */
+
+.swiper-container {
+    width: 96%;
+    height: 340px; /* aqui pueden cambiar el tamaño del slider */
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    top:40px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: red;
+    background-image: url("Imagenes/peliculas/1.jpg");
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center; 
+}
+
+
+  /* inicio slider */
+.slider-publicidad{
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: url(../imagenes/img1f4.jpg) ;
+    background-size: 100% 500px;
+    /* z-index: -1; */
+    animation: slide 20s infinite;   /* declaramos  animacion con nombre slide que dura 20 segundos y es infinita */
+    margin-top: 60px;
+}
+@keyframes slide{
+    0%{
+        background: url(../imagenes/img2f4.jpg);
+        background-size: 100% 500px;
+    }
+    50% {
+        background: url(../imagenes/img3f4.jpg);
+        background-size: 100% 500px;
+    
+    }
+    60% {
+        background: url(../imagenes/img3f4.jpg);
+        background-size: 100% 500px;
+    
+    }
+    100% {
+        background: url(../imagenes/img4-f5.jpg);
+        background-size: 100% 500px;
+    }
+}
+/* final slider */
+
+/*================== CLASE DE LOGIN ===================*/
+
+/*CLASE CON VENTANA MODAL*/
+.modalDialog {
+	position: absolute;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 220px;
+	Bottom: 0;
+	left: 27%;
+	background:#243B55;
+	z-index: 99999;
+    opacity:0;
+    width: 45%;
+    height: 50%;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 30px;
+	position: absolute;
+	right: -10px;
+	text-align: center;
+	top: -10px;
+	width: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 20px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }
+/*FIN DE VENTANA MODAL*/
+
+/* ================== MODAL VIDEO ================ */
+
+.modalVideo {
+	position: absolute;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0px;
+	Bottom: 0;
+	left: 1%;
+	background:#000;
+	z-index: 99999;
+    opacity:0;
+    width: 98%;
+    height: 650px;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalVideo:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalVideo > div {
+	width: 100px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 30px;
+	position: absolute;
+	right: -10px;
+	text-align: center;
+	top: -10px;
+	width: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 20px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }
+
+/* =============== FIN MODAL VIDEO =============== */
+.h1{
+    color:white;
+    position: absolute;
+    top: 0px;
+    left: 35%;
+    text-align: center;
+    font-family: Arial;
+}
+.h2{
+    text-align: center;
+    font-family: Arial;
+    color: red;
+}
+.d1{
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    height: 340px;
+    left: 25%;
+    top: 25%;
+    box-shadow: 7px 7px 7px 7px rgba(0.75,0.75,0.75,0.75);
+
+}
+.acce{
+    position: absolute;
+    font-family: Arial;
+    top:50%;
+    background: #0258BE;
+    color: white;
+    left: 35%;
+    width: 30%;
+    height: 30px;
+}
+.p1
+{
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    text-align: center;
+    font-family: Arial;
+    color:white;
+
+}
+.p2
+{
+    color:white;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    text-align: center;
+    font-family: Arial;
+}
+.p3{
+    
+    position: absolute;
+    left: 30%;
+    top: 70%;
+    text-align: center;
+    font-family: Arial;
+    color: white;
+}
+.p4
+{
+   
+    position: absolute;
+    left: 30%;
+    top: 70%;
+    text-align: center;
+    font-family: Arial;
+    color: red;
+}
+.caja
+{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+.caja2
+{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+.cerrarsesion
+{
+    position: absolute;
+    left: 82%;
+
+}
+/*Fin de clase de login*/
+
+/*Inicio de clases de sillas*/
+img{
+    width: 3%; 
+    height: 6%;
+    max-width:25px;
+    max-height:35px;
+    padding: 0,1%;
+    transition: 1s;
+}
+img:hover{
+    width: 6%; 
+    height:9%;
+    max-width:35px;
+    max-height:45px;
+    padding: 0,5px;
+}
+/* vacio entre sillas */
+.img2{
+    width: 3%; 
+    height: 6%;
+    max-width:25px;
+    max-height:35px;
+    padding: 0,05%;
+}
+/* sillas no permitidas */
+.img3:hover{
+    width: 3%; 
+    height: 6%;
+    max-width:25px;
+    max-height:35px;
+}
+/* se usará para las letras de las sillas (yo no quiero letras) */
+.img4{
+    width: 1%; 
+    height: 1%;
+    max-width:20px;
+    max-height:30px;
+    /* padding: 0,05%; */
+}
+.div_silas{
+    position: absolute;
+    top:47%;
+    left: 45%;
+    width: 40%;
+    height: 40%;
+}
+/*Fin clases de sillas*/
+
+/******CLASES DE REGISTRO********/
+.container{
+    max-width: 650px;
+    height: auto;
+    background-color: white;
+    margin: 5% auto;
+    padding-bottom: 1rem;
+}
+.form_top{
+    width: 100%;
+    text-align: center;
+    padding:  1rem 0 .0rem;
+    border-top: solid 4rem grey;
+    margin-bottom: 1rem;
+}
+.form_top h2{
+    font-weight: bold;
+    color: gray;
+    font-size: 20px;
+}
+h2 span{
+    color: orange;
+}
+.form_reg{
+    padding:  0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn_form{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.input, .btn_submit, .btn_reset{
+    background-color: violet;
+    padding: 5rem;
+    margin: 1rem 0;
+    border: none;
+    border-bottom: solid black .0rem;
+    transition:  all .5s;
+}
+
+.btn_submit, .btn_reset{
+    border-bottom: 1%;
+    background-color: orange;
+    color: white;
+    padding-right: 90px;
+    padding-bottom: 10px;
+}
+.btn_reset{
+    background-color: gray;
+}
+.btn_submit:hover{
+    background-color: #141E30;
+}
+.btn_reset:hover{
+    background-color: #141E30;
+}
+.h3{
+    color: white;
+}
+/********FIN CLASES REGISTRO********/
+/********INICIO DE CLASES DE USUARIO********/
+
+/********FIN DE CLASES DE USUARIO********/
+
+#imagen1{
+    background: black;
+    background: url(../Imagenes/peliculas/1.jpg);
+    background-size: cover;
+}
+#imagen2{
+    background: black;
+    background: url(../Imagenes/peliculas/2.jpg);
+    background-size: cover;
+}
+#imagen3{
+    background: black;
+    background: url(../Imagenes/peliculas/3.jpg);
+    background-size: cover;
+}
+#imagen4{
+    background: black;
+    background: url(../Imagenes/peliculas/4.jpg);
+    background-size: cover;
+}
+#imagen5{
+    background: black;
+    background: url(../Imagenes/peliculas/5.jpeg);
+    background-size: cover;
+}
+#imagen6{
+    background: black;
+    background: url(../Imagenes/peliculas/6.png);
+    background-size: cover;
+}
